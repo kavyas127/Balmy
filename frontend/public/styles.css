@@ -259,3 +259,14 @@ a {
     flex-direction: column;
     row-gap: 2rem;
 }
+
+.stats-whole{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: rgb(250, 156, 74);
+    background: linear-gradient(180deg, rgba(250, 156, 74, 1) 25%, rgba(255, 150, 58, 1) 45%, rgba(255, 145, 48, 1) 50%, rgba(255, 145, 48, 1) 60%, rgba(255, 145, 48, 1) 75%);
+    justify-content: center;
+    align-items: center;
+}
