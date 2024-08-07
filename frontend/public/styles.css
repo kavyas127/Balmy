@@ -1,0 +1,261 @@
+@font-face {
+    font-family: magiona;
+    src: url(./fonts/Magiona\ Display.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: playfair;
+    src: url(./fonts/PlayfairDisplay-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: lora;
+    src: url(./fonts/Lora-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.firstPage {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+    background: rgb(244, 157, 26);
+    background: linear-gradient(90deg, rgba(244, 157, 26, 1) 35%, rgba(224, 224, 224, 1) 50%, rgba(224, 224, 224, 1) 100%);
+}
+
+.center-block {
+    display: flex;
+    height: 100vh;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(224, 224, 224);
+    background: linear-gradient(180deg, rgba(224, 224, 224, 1) 25%, rgba(242, 239, 229, 1) 75%);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.navbar {
+    height: 100vh;
+    width: 7vw;
+    display: flex;
+    background: rgb(250, 156, 74);
+    background: linear-gradient(180deg, rgba(250, 156, 74, 1) 25%, rgba(255, 150, 58, 1) 45%, rgba(255, 145, 48, 1) 50%, rgba(255, 145, 48, 1) 60%, rgba(255, 145, 48, 1) 75%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.homebutton {
+    height: fit-content;
+    width: fit-content;
+    padding: 0.7rem;
+    font-size: 1rem;
+    background: rgb(250, 156, 74);
+    background: linear-gradient(180deg, rgba(250, 156, 74, 1) 25%, rgba(255, 150, 58, 1) 45%, rgba(255, 145, 48, 1) 50%, rgba(255, 145, 48, 1) 60%, rgba(255, 145, 48, 1) 75%);
+    color: white;
+    border-radius: 0.5rem;
+    font-family: poppins;
+    transform: translate(25rem, 15rem);
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.homebutton:hover {
+    color: white;
+    /* Orange text color */
+    box-shadow: 0 0 1rem rgba(255, 145, 48, 0.8);
+    /* Glowing effect */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.fa-house, .fa-circle-question, .fa-wand-magic-sparkles, .fa-envelope,.fa-meteor {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.fa-meteor{
+    transform: translateY(-7rem);
+    font-size: 2rem;
+}
+
+.fa-house:hover, .fa-circle-question:hover, .fa-wand-magic-sparkles:hover, .fa-envelope:hover {
+    border-radius: 2rem;
+    background-color: #FF8225;
+}
+
+.most-listened-artists {
+    width: 20vw;
+    height: 100vh;
+    background: white;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1.2rem;
+    z-index: 100;
+    border-left: solid 0.1rem #FF8225;
+}
+
+.div-title-artists{
+    color: rgb(250, 156, 74);
+    color: linear-gradient(180deg, rgba(250, 156, 74, 1) 25%, rgba(255, 150, 58, 1) 45%, rgba(255, 145, 48, 1) 50%, rgba(255, 145, 48, 1) 60%, rgba(255, 145, 48, 1) 75%);
+    font-size: 1.2rem;
+    font-family: magiona;
+    font-weight: 200;
+}
+
+.artist-lineup{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    row-gap: 0.3rem;
+}
+
+.top-1{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    background-color: rgb(250, 156, 74);
+    background-color: linear-gradient(180deg, rgba(250, 156, 74, 1) 25%, rgba(255, 150, 58, 1) 45%, rgba(255, 145, 48, 1) 50%, rgba(255, 145, 48, 1) 60%, rgba(255, 145, 48, 1) 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-1:hover{
+    background-color: #FF8225;
+}
+
+.num{
+    color: white;
+    font-size: 1.8rem;
+    text-align: left;
+    width: 14rem;
+    z-index: 20;
+    font-family: magiona;
+}
+
+.artist-name{
+    font-size: 2rem;
+    color: white;
+    z-index: 50;
+    font-family: magiona;
+    font-weight: 200;
+    height: 2.5rem;
+}
+
+.thew{
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    opacity: 0.5;
+}
+
+.weekplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 200;
+}
+
+.wrapper1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 9.5rem;
+}
+
+.rest-artists{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+    width: 15rem;
+    border-radius: 0.7rem;
+    background-color: white;
+    border: solid 0.1rem rgb(250, 156, 74);;
+}
+
+.num2{
+    color: rgb(250, 156, 74);
+    font-size: 1rem;
+    text-align: left;
+    font-family: poppins;
+}
+
+.artist-name2{
+    font-size: 1.5rem;
+    color: rgb(250, 156, 74);
+    font-family: magiona;
+    font-weight: 200;
+}
+
+.singer-icon{
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 0.5rem;
+}
+
+.fa-regular{
+    color: rgb(250, 156, 74);
+    font-size: 1.9rem;
+}
+
+.fa-regular:hover{
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: #FF8225;
+    color: white;
+}
+
+.background-img{
+    position: absolute;
+    height: 90vh;
+    width: 67vw;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.background-img2{
+    position: absolute;
+    opacity: 0.2;
+}
+
+.navbarwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}

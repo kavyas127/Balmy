@@ -1,0 +1,23 @@
+0000000000000000000000000000000000000000 862a1b4f351d72dac4e37ce2de82ffd583abfaa3 kavyas127 <officialkesai315@gmail.com> 1719861151 +0530	clone: from https://github.com/kavyas127/Balmy.git
+862a1b4f351d72dac4e37ce2de82ffd583abfaa3 76a481832b8055985eafca4cca08184463562596 kavyas127 <officialkesai315@gmail.com> 1722611589 +0530	commit: starting to work on balmy <3
+76a481832b8055985eafca4cca08184463562596 7873fb8fc08af12bf3555c4e6fbb9f8743775ec2 kavyas127 <officialkesai315@gmail.com> 1722611781 +0530	merge origin/main: Merge made by the 'ort' strategy.
+7873fb8fc08af12bf3555c4e6fbb9f8743775ec2 fa4cdc03065b511d3929ff465a85e6f8aff102e4 kavyas127 <officialkesai315@gmail.com> 1722619924 +0530	commit: removed node modules
+fa4cdc03065b511d3929ff465a85e6f8aff102e4 2aff7b60554ac7d724fdcbf6cf70587fb51b7763 kavyas127 <officialkesai315@gmail.com> 1722620034 +0530	commit: removed node modules
+2aff7b60554ac7d724fdcbf6cf70587fb51b7763 9ac216705573dfc9a27034fe7c2cd7440f10a8d7 kavyas127 <officialkesai315@gmail.com> 1722620081 +0530	commit: removed node modules
+9ac216705573dfc9a27034fe7c2cd7440f10a8d7 a369fd9d5ac717451ac3daf407efe1bd273567b4 kavyas127 <officialkesai315@gmail.com> 1722620265 +0530	commit: Update .gitignore to exclude node_modules directories
+a369fd9d5ac717451ac3daf407efe1bd273567b4 db5d849d57e44e9119bf1a0f33f4f1ffc1b883fd kavyas127 <officialkesai315@gmail.com> 1722620992 +0530	commit: started using spotify api
+db5d849d57e44e9119bf1a0f33f4f1ffc1b883fd f2332a8db9bd3c8c32760129516336ef632837ab kavyas127 <officialkesai315@gmail.com> 1722623972 +0530	commit: almost done with backend
+f2332a8db9bd3c8c32760129516336ef632837ab efd40663983a9a5ae1f751adea299cb930fed02c kavyas127 <officialkesai315@gmail.com> 1722624773 +0530	commit: added the images too
+efd40663983a9a5ae1f751adea299cb930fed02c 51a3c990bf479ebea54d6bd1ce1e16eef23183d3 kavyas127 <officialkesai315@gmail.com> 1722625215 +0530	commit: only top 10 tracks will be shown
+51a3c990bf479ebea54d6bd1ce1e16eef23183d3 37a365088a801e713b5880f7545960acae596dfa kavyas127 <officialkesai315@gmail.com> 1722666206 +0530	commit: Added 3 different time spans
+37a365088a801e713b5880f7545960acae596dfa 09ceebfdbeb474ad3bca024f6a8d91f4ce92ce4f kavyas127 <officialkesai315@gmail.com> 1722666480 +0530	commit: balmy header added
+09ceebfdbeb474ad3bca024f6a8d91f4ce92ce4f fdb3f2c96003a1c9de539881d5b0039323feb981 kavyas127 <officialkesai315@gmail.com> 1722788373 +0530	commit: started working on frontend
+fdb3f2c96003a1c9de539881d5b0039323feb981 1db5cf378f7bcda790a38f04e124bbf82b27af2e kavyas127 <officialkesai315@gmail.com> 1722791786 +0530	commit: started working on frontend
+1db5cf378f7bcda790a38f04e124bbf82b27af2e 96078946bcea05b772827732a222f01adad24194 kavyas127 <officialkesai315@gmail.com> 1722792784 +0530	commit: frontend checkpoint 2
+96078946bcea05b772827732a222f01adad24194 f3bd804317a5c6f21c3a67a2e2b410150153ba22 kavyas127 <officialkesai315@gmail.com> 1722796396 +0530	commit: checkpoint
+f3bd804317a5c6f21c3a67a2e2b410150153ba22 0433b6aece0c0dfbd38dccade1a9509f69294642 kavyas127 <officialkesai315@gmail.com> 1722798351 +0530	commit: experimenting with first page frontend
+0433b6aece0c0dfbd38dccade1a9509f69294642 cf1d6194da8a48922b74bbeda506e73c65eb8f39 kavyas127 <officialkesai315@gmail.com> 1722799830 +0530	commit: experimenting with frontend 2
+cf1d6194da8a48922b74bbeda506e73c65eb8f39 367760593900bb9f57010f7000f921214f46a50b kavyas127 <officialkesai315@gmail.com> 1722881314 +0530	commit: frontend commit
+367760593900bb9f57010f7000f921214f46a50b 5d7bc80ecab254eb698ed84ce7f117c278be15f1 kavyas127 <officialkesai315@gmail.com> 1722884815 +0530	commit: frontend almost done?
+5d7bc80ecab254eb698ed84ce7f117c278be15f1 165a6dc466e822fd79c4ce8069c7052a066a3dce kavyas127 <officialkesai315@gmail.com> 1722942695 +0530	commit: frontend first page alterations
+165a6dc466e822fd79c4ce8069c7052a066a3dce bfcd1e60c7aaac360312e25c50a65d3194a8b944 kavyas127 <officialkesai315@gmail.com> 1722970267 +0530	commit: changed font
