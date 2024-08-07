@@ -16,17 +16,16 @@ function App() {
         if (accessToken) {
             localStorage.setItem('access_token', accessToken);
             setIsLoggedIn(true);
+            window.history.replaceState({}, document.title, '/stats'); // Update URL to /stats
         } else {
             const storedToken = localStorage.getItem('access_token');
             if (storedToken) {
                 setIsLoggedIn(true);
+                window.history.replaceState({}, document.title, '/stats'); // Update URL to /stats
             } else {
                 setIsLoggedIn(false);
             }
         }
-
-        // Clear URL parameters to avoid showing access token in URL
-        window.history.replaceState({}, document.title, window.location.pathname);
     }, []);
 
     const fetchTopArtists = async (token) => {
@@ -66,10 +65,7 @@ function App() {
         const url = new URL(window.location.href);
         url.searchParams.delete('access_token');
         url.searchParams.delete('refresh_token');
-        window.history.replaceState({}, document.title, url.toString());
-
-        // Redirect to the base page or login page
-        window.location.href = 'http://localhost:3000';
+        window.history.replaceState({}, document.title, '/'); // Redirect to home page
     };
 
     const handleFetchTopArtists = () => {
@@ -91,33 +87,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <div className='firstPage'>
-                    <img src="../imgs/bg.png" className='background-img'></img>
-                    <img src="../imgs/bg2.png" className='background-img2'></img>
-                    <div className='navbar'>
-                    <i class="fa-solid fa-meteor"></i>
-                        <div className='navbarwrapper'>
-                            <a><i className="fa-solid fa-house"></i></a>
-                            <a><i class="fa-solid fa-circle-question"></i></a>
-                            <a><i class="fa-solid fa-wand-magic-sparkles"></i></a>
-                            <a><i class="fa-solid fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div className='center-block'>
-                        {!isLoggedIn && <button className='homebutton'><a href="http://localhost:5000/login">Login with Spotify</a><i class="fa-solid fa-angles-right"></i></button>}
-                    </div>
-                    <div className='most-listened-artists'>
-                        <h2 className='div-title-artists'>Most Streamed Artists Worldwide</h2>
-                        <div className='artist-lineup'>
-                            <a href="http://localhost:5000/login"><TopArtists /></a>
-                            <a href="http://localhost:5000/login"><RestArtists num="2" name="Taylor Swift" /></a>
-                            <a href="http://localhost:5000/login"><RestArtists num="3" name="Post Malone" /></a>
-                            <a href="http://localhost:5000/login"><RestArtists num="4" name="Nicki Minaj" /></a>
-                            <a href="http://localhost:5000/login"><RestArtists num="5" name="Billie Eilish" /></a>
-                        </div>
-                    </div>
-                </div>
-                {isLoggedIn && (
+                {isLoggedIn ? (
                     <>
                         <button onClick={handleLogout}>Logout</button>
                         <div>
@@ -168,6 +138,33 @@ function App() {
                             </>
                         )}
                     </>
+                ) : (
+                    <div className='firstPage'>
+                        <img src="../imgs/bg.png" className='background-img'></img>
+                        <img src="../imgs/bg2.png" className='background-img2'></img>
+                        <div className='navbar'>
+                            <i className="fa-solid fa-meteor"></i>
+                            <div className='navbarwrapper'>
+                                <a><i className="fa-solid fa-house"></i></a>
+                                <a><i className="fa-solid fa-circle-question"></i></a>
+                                <a><i className="fa-solid fa-wand-magic-sparkles"></i></a>
+                                <a><i className="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div className='center-block'>
+                            <button className='homebutton'><a href="http://localhost:5000/login">Login with Spotify</a><i className="fa-solid fa-angles-right"></i></button>
+                        </div>
+                        <div className='most-listened-artists'>
+                            <h2 className='div-title-artists'>Most Streamed Artists Worldwide</h2>
+                            <div className='artist-lineup'>
+                                <a href="http://localhost:5000/login"><TopArtists /></a>
+                                <a href="http://localhost:5000/login"><RestArtists num="2" name="Taylor Swift" /></a>
+                                <a href="http://localhost:5000/login"><RestArtists num="3" name="Post Malone" /></a>
+                                <a href="http://localhost:5000/login"><RestArtists num="4" name="Nicki Minaj" /></a>
+                                <a href="http://localhost:5000/login"><RestArtists num="5" name="Billie Eilish" /></a>
+                            </div>
+                        </div>
+                    </div>
                 )}
             </header>
         </div>

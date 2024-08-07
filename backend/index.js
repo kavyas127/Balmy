@@ -49,7 +49,7 @@ app.get('/callback', async (req, res) => {
         }
 
         const data = await response.json();
-        res.redirect(`http://localhost:3000?access_token=${data.access_token}&refresh_token=${data.refresh_token}`);
+        res.redirect(`http://localhost:3000/stats?access_token=${data.access_token}&refresh_token=${data.refresh_token}`);
     } catch (error) {
         console.error('Error in /callback:', error);
         res.status(500).send('Server error');
