@@ -288,6 +288,7 @@ a {
     font-family: magiona;
     font-weight: 200;
     text-align: center;
+    font-size: 3rem;
 }
 
 .chooser-wrapper{
@@ -307,7 +308,7 @@ a {
     flex-direction: row;
     column-gap: 2rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .button-chooser{
@@ -337,15 +338,24 @@ a {
 
 .artists-align{
     display: flex;
-    flex-direction: row;
-    column-gap: 6rem;
+    flex-direction: column;
+    row-gap: 1rem;
     justify-content: center;
     align-items: center;
 }
 
+.li-artists{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20rem;
+}
+
 .top-art-imgs{
-    width: 15rem;
-    height: 15rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 0.5rem;
 }
 

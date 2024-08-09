@@ -124,13 +124,14 @@ function App() {
                                             <ol className="artists-align">
                                                 {topArtists.length > 0 ? (
                                                     topArtists.map((artist, index) => (
-                                                        <li key={artist.id}>
+                                                        <li key={artist.id} className="li-artists">
+                                                        <p className="top-art-name">{index + 1}</p>
                                                             <img
                                                                 src={artist.images[0]?.url}
                                                                 alt={artist.name}
                                                                 className="top-art-imgs"
                                                             />
-                                                            <p className="top-art-name">{index + 1}.   {artist.name}</p>
+                                                            <p className="top-art-name">{artist.name}</p>
                                                         </li>
                                                     ))
                                                 ) : (
