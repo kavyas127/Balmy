@@ -94,45 +94,50 @@ function App() {
                 {isLoggedIn ? (
                     <>
                         <div className="stats-whole">
-                            <button onClick={handleLogout}>Logout</button>
-                            <div>
-                                <label htmlFor="timeRange">Select Time Range: </label>
-                                <select
-                                    id="timeRange"
-                                    value={timeRange}
-                                    onChange={(e) => setTimeRange(e.target.value)}
-                                >
-                                    <option value="long_term">All time</option>
-                                    <option value="medium_term">Last 6 Months</option>
-                                    <option value="short_term">Last Month</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button onClick={handleFetchTopArtists}>
-                                    Fetch Top Artists
-                                </button>
-                                <button onClick={handleFetchTopTracks}>Fetch Top Tracks</button>
+                            <button onClick={handleLogout} className="logout-botton">Logout</button>
+                            <div className="chooser-wrapper">
+                                <div className="chooser">
+                                    <label htmlFor="timeRange">Select Time Range: </label>
+                                    <select
+                                        id="timeRange"
+                                        value={timeRange}
+                                        onChange={(e) => setTimeRange(e.target.value)}
+                                        className="dropdown1"
+                                    >
+                                        <option value="long_term">All time</option>
+                                        <option value="medium_term">Last 6 Months</option>
+                                        <option value="short_term">Last Month</option>
+                                    </select>
+                                </div>
+                                <div className="button-chooser">
+                                    <button onClick={handleFetchTopArtists} className="buttons">
+                                        Fetch Top Artists
+                                    </button>
+                                    <button onClick={handleFetchTopTracks} className="buttons">Fetch Top Tracks</button>
+                                </div>
                             </div>
                             {activeSection === "artists" && (
                                 <>
                                     <div className="stats-top-artists">
-                                        <h2>Top Artists</h2>
-                                        <ul>
-                                            {topArtists.length > 0 ? (
-                                                topArtists.map((artist) => (
-                                                    <li key={artist.id}>
-                                                        <img
-                                                            src={artist.images[0]?.url}
-                                                            alt={artist.name}
-                                                            style={{ width: "100px", height: "100px" }}
-                                                        />
-                                                        <p>{artist.name}</p>
-                                                    </li>
-                                                ))
-                                            ) : (
-                                                <p>No top artists found</p>
-                                            )}
-                                        </ul>
+                                        <h2 className="artist-name-title">Top Artists</h2>
+                                        <div className="artists-main-wrapper">
+                                            <ol className="artists-align">
+                                                {topArtists.length > 0 ? (
+                                                    topArtists.map((artist, index) => (
+                                                        <li key={artist.id}>
+                                                            <img
+                                                                src={artist.images[0]?.url}
+                                                                alt={artist.name}
+                                                                className="top-art-imgs"
+                                                            />
+                                                            <p className="top-art-name">{index + 1}.   {artist.name}</p>
+                                                        </li>
+                                                    ))
+                                                ) : (
+                                                    <p>No top artists found</p>
+                                                )}
+                                            </ol>
+                                        </div>
                                     </div>
                                 </>
                             )}

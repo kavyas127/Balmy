@@ -269,4 +269,100 @@ a {
     background: linear-gradient(180deg, rgba(250, 156, 74, 1) 25%, rgba(255, 150, 58, 1) 45%, rgba(255, 145, 48, 1) 50%, rgba(255, 145, 48, 1) 60%, rgba(255, 145, 48, 1) 75%);
     justify-content: center;
     align-items: center;
+    row-gap: 2rem;
 }
+
+.logout-botton{
+    transform: translate(43rem, -19rem);
+    height: 2.5rem;
+    width: 7rem;
+    border-radius: 0.5rem;
+    font-family: poppins;
+    font-weight: 400;
+    cursor: pointer;
+    position: fixed;
+}
+
+.artist-name-title{
+    color: white;
+    font-family: magiona;
+    font-weight: 200;
+    text-align: center;
+}
+
+.chooser-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+}
+
+.chooser{
+    font-family: poppins;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.button-chooser{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    font-family: poppins;
+    font-size: 0.9rem;
+}
+
+.dropdown1{
+    height: 2.5rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    font-family: poppins;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.artists-align{
+    display: flex;
+    flex-direction: row;
+    column-gap: 6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-art-imgs{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+}
+
+.stats-top-artists{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    color: white;
+    font-family: poppins;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-art-name{
+    text-align: center;
+    font-family: magiona;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
