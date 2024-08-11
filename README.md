@@ -1,5 +1,7 @@
 ## BALMY
+# Your daily Spotify Wrapped!
 
+<h1>I built Balmy coz I was bored in my vacations and also wanted to access Spotify Wrapped everyday!</h1>
 <div align="center">
     <figure>
         <img src="readme_imgs/home.png" alt="Home Page" />
