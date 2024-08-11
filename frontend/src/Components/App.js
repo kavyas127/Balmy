@@ -125,13 +125,15 @@ function App() {
                                                 {topArtists.length > 0 ? (
                                                     topArtists.map((artist, index) => (
                                                         <li key={artist.id} className="li-artists">
-                                                        <p className="top-art-name">{index + 1}</p>
+                                                            <p className="numbering2">{index + 1}</p>
+                                                            <div className="wapper">
                                                             <img
                                                                 src={artist.images[0]?.url}
                                                                 alt={artist.name}
                                                                 className="top-art-imgs"
                                                             />
                                                             <p className="top-art-name">{artist.name}</p>
+                                                            </div>
                                                         </li>
                                                     ))
                                                 ) : (
@@ -142,32 +144,36 @@ function App() {
                                     </div>
                                 </>
                             )}
+
                             {activeSection === "tracks" && (
                                 <>
                                     <div className="stats-top-tracks">
-                                        <h2>Top Tracks</h2>
-                                        <ul>
+                                    <h2 className="artist-name-title">Top Tracks</h2>
+                                    <div className="all-tracks">
+                                        <ul style={{ display: "grid", gridTemplateColumns: "repeat(5, 15rem)", gap: "20px" }}>
                                             {topTracks.length > 0 ? (
-                                                topTracks.map((track) => (
-                                                    <li key={track.id}>
+                                                topTracks.map((track, index) => (
+                                                    <li key={track.id} style={{ listStyle: "none", textAlign: "center" }}>
+                                                        <p className="numbering-tracks">{index + 1}</p>
                                                         <img
                                                             src={track.album.images[0]?.url}
                                                             alt={track.name}
                                                             style={{ width: "100px", height: "100px" }}
                                                         />
                                                         <p>{track.name}</p>
-                                                        <p>Album: {track.album.name}</p>
                                                     </li>
                                                 ))
                                             ) : (
                                                 <p>No top tracks found</p>
                                             )}
                                         </ul>
+                                        </div>
                                     </div>
                                 </>
                             )}
                         </div>
                     </>
+
                 ) : (
                     <div className="firstPage">
                         <img src="../imgs/bg.png" className="background-img"></img>
