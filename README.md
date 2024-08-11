@@ -27,7 +27,7 @@
     </figure>
     <br>
     <figure>
-        <img src="readme_imgs/download-artists.png" alt="Downloaded Artists" />
+        <img src="readme_imgs/download-artists.png" alt="Downloaded Artists" /><br>
         <figcaption>Downloaded Artists</figcaption>
     </figure>
     <br>
