@@ -1,4 +1,4 @@
-<h2> BALMY </h2>
+<h3>BALMY</h3>
 <h5><i>Your daily Spotify Wrapped!</i></h5>
 
 <h4>I built Balmy coz I was bored in my vacations and also I wanted to access Spotify Wrapped everyday!</h4>
