@@ -1,3 +1,3 @@
 ## BALMY
 
-readme_imgs\image.png
+[Home Page](readme_imgs/home.png)
