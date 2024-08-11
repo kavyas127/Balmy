@@ -1,5 +1,6 @@
 # Ignore node_modules in the root directory
 /node_modules
+/readme_imgs
 
 # Ignore node_modules in backend and frontend
 backend/node_modules
