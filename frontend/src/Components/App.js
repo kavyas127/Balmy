@@ -132,6 +132,7 @@ function App() {
                 {isLoggedIn ? (
                     <>
                         <div className="stats-whole">
+                        <i className="fa-solid fa-meteor fa-second"></i>
                             <button onClick={handleLogout} className="logout-botton">Logout</button>
                             <div className="chooser-wrapper">
                                 <div className="chooser">
@@ -223,7 +224,7 @@ function App() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <button className="download-tracks" onClick={handleDownloadTracks}>Download</button>
+                                    <button className="download-artists" onClick={handleDownloadTracks}>Download</button>
                                 </>
                             )}
                         </div>

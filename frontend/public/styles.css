@@ -291,6 +291,10 @@ a {
     position: fixed;
 }
 
+.logout-botton:hover{
+    border: solid #c55500;
+}
+
 .artist-name-title {
     color: white;
     font-family: magiona;
@@ -344,6 +348,10 @@ a {
     text-align: center;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+.dropdown1:hover{
+    border: solid #c55500;
 }
 
 .artists-align {
@@ -402,7 +410,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     padding: 0.7rem;
 }
 
@@ -426,4 +433,24 @@ a {
     font-family: magiona;
     font-size: 1.5rem;
     width: 2rem;
+}
+
+.download-artists{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    font-family: poppins;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transform: translateY(-2rem);
+}
+
+.download-artists:hover, .buttons:hover{
+    border: solid #c55500;
+}
+
+.fa-second{
+    color: white;
+    transform: translate(-45rem, -19rem);
+    position: fixed;
 }
