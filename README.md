@@ -1,3 +1,3 @@
 ## BALMY
 
-[Home Page](readme_imgs/home.png)
+![Home Page](readme_imgs/home.png)
