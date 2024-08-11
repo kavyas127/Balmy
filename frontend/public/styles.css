@@ -378,6 +378,7 @@ a {
 }
 
 .stats-top-artists {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -385,6 +386,7 @@ a {
     font-family: poppins;
     justify-content: center;
     align-items: center;
+    border-radius: 0.5rem;
 }
 
 .top-art-name {
@@ -400,7 +402,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 0.5rem;
+    
+    padding: 0.7rem;
 }
 
 .all-tracks{
@@ -408,6 +411,10 @@ a {
     font-weight: 400;
     color: white;
     font-size: 0.85rem;
+}
+
+.tracks-img{
+    border-radius: 0.5rem;
 }
 
 .numbering-tracks{

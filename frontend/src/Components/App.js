@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TopArtists from "./TopArtist";
 import RestArtists from "./RestArtists";
+import { toPng } from "html-to-image";
 
 function App() {
     const [topArtists, setTopArtists] = useState([]);
@@ -88,6 +89,43 @@ function App() {
         }
     };
 
+    const downloadImage = (selector, filename) => {
+        const element = document.querySelector(selector);
+        if (!element) {
+            console.error("Element not found:", selector);
+            return;
+        }
+
+        // Save the original background color
+        const originalBackground = element.style.background;
+
+        // Temporarily set the background to red
+        element.style.background = "#ff9130"; // or any color you prefer
+
+        toPng(element)
+            .then((dataUrl) => {
+                const link = document.createElement("a");
+                link.href = dataUrl;
+                link.download = filename;
+                link.click();
+            })
+            .catch((error) => {
+                console.error("Error capturing the image:", error);
+            })
+            .finally(() => {
+                // Revert the background color to its original state
+                element.style.background = originalBackground;
+            });
+    };
+
+    const handleDownloadArtists = () => {
+        downloadImage(".stats-top-artists", "top-artists.png");
+    };
+
+    const handleDownloadTracks = () => {
+        downloadImage(".stats-top-tracks", "top-tracks.png");
+    };
+
     return (
         <div className="App">
             <header className="App-header">
@@ -116,6 +154,7 @@ function App() {
                                     <button onClick={handleFetchTopTracks} className="buttons">Fetch Top Tracks</button>
                                 </div>
                             </div>
+
                             {activeSection === "artists" && (
                                 <>
                                     <div className="stats-top-artists">
@@ -127,48 +166,64 @@ function App() {
                                                         <li key={artist.id} className="li-artists">
                                                             <p className="numbering2">{index + 1}</p>
                                                             <div className="wapper">
-                                                            <img
-                                                                src={artist.images[0]?.url}
-                                                                alt={artist.name}
-                                                                className="top-art-imgs"
-                                                            />
-                                                            <p className="top-art-name">{artist.name}</p>
+                                                                <img
+                                                                    src={artist.images[0]?.url}
+                                                                    alt={artist.name}
+                                                                    className="top-art-imgs"
+                                                                />
+                                                                <p className="top-art-name">{artist.name}</p>
                                                             </div>
                                                         </li>
                                                     ))
                                                 ) : (
-                                                    <p>No top artists found</p>
+                                                    <p className="no-found">No top artists found</p>
                                                 )}
                                             </ol>
                                         </div>
                                     </div>
+                                    <button className="download-artists" onClick={handleDownloadArtists}>Download</button>
                                 </>
                             )}
 
                             {activeSection === "tracks" && (
                                 <>
                                     <div className="stats-top-tracks">
-                                    <h2 className="artist-name-title">Top Tracks</h2>
-                                    <div className="all-tracks">
-                                        <ul style={{ display: "grid", gridTemplateColumns: "repeat(5, 15rem)", gap: "20px" }}>
-                                            {topTracks.length > 0 ? (
-                                                topTracks.map((track, index) => (
-                                                    <li key={track.id} style={{ listStyle: "none", textAlign: "center" }}>
-                                                        <p className="numbering-tracks">{index + 1}</p>
-                                                        <img
-                                                            src={track.album.images[0]?.url}
-                                                            alt={track.name}
-                                                            style={{ width: "100px", height: "100px" }}
-                                                        />
-                                                        <p>{track.name}</p>
-                                                    </li>
-                                                ))
-                                            ) : (
-                                                <p>No top tracks found</p>
-                                            )}
-                                        </ul>
+                                        <h2 className="artist-name-title">Top Tracks</h2>
+                                        <div className="all-tracks">
+                                            <ul style={{ display: "grid", gridTemplateColumns: "repeat(5, 15rem)", gap: "25px" }}>
+                                                {topTracks.length > 0 ? (
+                                                    topTracks.map((track, index) => {
+                                                        // Function to extract the alt text if there's a '-' after a ')'
+                                                        const getAltText = (name) => {
+                                                            const parts = name.split(' - ');
+                                                            if (parts.length > 1 && parts[0].endsWith(')')) {
+                                                                return parts[0].trim();
+                                                            }
+                                                            return name;
+                                                        };
+
+                                                        const altText = getAltText(track.name);
+
+                                                        return (
+                                                            <li key={track.id} style={{ listStyle: "none", textAlign: "center" }}>
+                                                                <p className="numbering-tracks">{index + 1}</p>
+                                                                <img
+                                                                    className="tracks-img"
+                                                                    src={track.album.images[0]?.url}
+                                                                    alt={altText} // Use the processed name for the alt text
+                                                                    style={{ width: "6rem", height: "6rem" }}
+                                                                />
+                                                                <p>{altText}</p>
+                                                            </li>
+                                                        );
+                                                    })
+                                                ) : (
+                                                    <p>No top tracks found</p>
+                                                )}
+                                            </ul>
                                         </div>
                                     </div>
+                                    <button className="download-tracks" onClick={handleDownloadTracks}>Download</button>
                                 </>
                             )}
                         </div>
